@@ -1,13 +1,21 @@
+
 .App {
   text-align: center;
   height:100vh;
-  background:linear-gradient(180deg,rgb(255,115,0),rgb(229,229,229) ,rgb(62,217,0));
+  background: rgb(255,226,63);
+  background: radial-gradient(circle, rgba(255,226,63,1) 15%, rgba(241,52,46,1) 100%);
   }
 .loader{
   width:100%;
   position:absolute;
   top:0;
   z-index:10;
+}
+.text-small{
+  font-size:0.8rem;
+  font-weight: bolder;
+  line-height:0.2rem;
+  line-height:0.2rem;
 }
 .bg-notfound{
   background:linear-gradient(45deg,#0054a6,#53f3fc);
@@ -27,9 +35,12 @@
   margin-bottom:1rem;
 }
 .front-img{
-  width:4.5rem;
+  width:13rem;
   object-fit:contain;
   filter:drop-shadow(0px 2px 5px #434343);
+}
+.heading{
+  font-size:1.8rem;
 }
 .glass-morphism{
   background: rgba( 255, 255, 255, 0.2 );
@@ -43,34 +54,32 @@
   height:100vh;
 }
 .flash{
-  border-radius:50%;
-  width:80px;
-  height:60px;
-  text-wrap:wrap;
-  font-size:1rem;
+  position:absolute;
+  left:12%;
+  top:23%;
+  transform:translate(-50%,-50%) rotate(-35deg);
+  font-size:1.3rem;
   font-weight:bolder;
-  color:#474747;
-  display:flex;
-  margin:auto;
-  align-items:center;
-  justify-content: center;
   padding:0.5rem;
-  white-space: wrap;
-  transform:rotate(-30deg);
   animation:flash 1s linear infinite;
 }
 @keyframes flash{
   0%{
-    background:#ff3d00;
+    color:rgb(134,30,0);
   }
   30%{
-    background:rgb(0,137,255);
+    color:rgb(0,68,127);
   }
   60%{
-    background:rgb(255,86,0);
+    color:rgb(8,75,0);
   }
   100%{
-    background:rgb(126,234,250);
+    color:rgb(64,0,119);
     
   }
+}
+@media screen and (max-width:768px){
+ .front-img{
+    width:4.5rem;
+  } 
 }

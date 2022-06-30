@@ -1,10 +1,10 @@
 import AppBar from '@mui/material/AppBar';
 import {styled} from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
-import Stack from '@mui/material/Stack';
+
 import {useState,useContext} from "react";
 import {Link} from "react-router-dom";
-import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
@@ -16,7 +16,7 @@ import {toast} from "react-toastify";
 const Header=()=>{
   const state=useContext(AdminDataNode);
   
-  const [anchorEl, setAnchorEl] =useState("");
+  const [anchorEl, setAnchorEl] =useState(null);
 
   const Bar=styled(AppBar)({
   background: "rgba( 255, 255, 255, 0.2 )",
@@ -42,25 +42,29 @@ const Logout=()=>{
   };
 
   const handleClose = () => {
-    setAnchorEl("");
+    setAnchorEl(null);
   }; 
   return (
     <>
       <Bar position="sticky">
         <Container maxWidth="xl">
-          <Toolbar className="">
-           <IconButton size="large"
-                        aria-label="display more actions"
-                        edge="end"
-                        color="inherit"
-                        aria-haspopup="true"
-                        onClick={handleMenu} >
-            <MoreIcon/>
-            <Stack className="text-center p-2">श्रम महावीराय नमः</Stack>
-            <MoreIcon />
-           </IconButton>
-           <Menu 
-                id="menu-appbar"
+          <Toolbar className="justify-content-center">
+             <Button aria-label="display more actions"
+                     color="inherit"
+                     aria-haspopup="true"
+                     sx={{mx:"auto"}}
+                     onClick={handleMenu} >
+                <MoreIcon/>
+                <span className="text-center p-2">जय महावीराय नमः</span>
+                <MoreIcon />
+               </Button>
+          </Toolbar>
+          <Toolbar className="justify-content-between">
+              <span className="mx-1 text-small">जय आत्मानंद देवेन्द्र शिव</span>
+              <span className="mx-1 text-small">जय सौभाग्य उमेश प्रकाश</span>
+          </Toolbar>
+        </Container>
+          <Menu id="menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
                   vertical: 'top',
@@ -79,8 +83,6 @@ const Logout=()=>{
                 <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" to="/admin">Admin</Link></MenuItem>
                 {state?.admin?.email?<MenuItem onClick={Logout}>Logout</MenuItem>:""}
               </Menu>
-          </Toolbar>
-        </Container>
       </Bar>
 
     </>

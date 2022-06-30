@@ -2,7 +2,8 @@ import {Link} from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import SendIcon from '@mui/icons-material/Send';
-import LoadingButton from '@mui/lab/LoadingButton';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import {useState} from "react";
 import {toast} from "react-toastify";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -14,7 +15,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from "@mui/material/IconButton";
 const Login=()=>{
   const navigate=useNavigate();
-  const [loading,setloading]=useState(false)
+  
   const initialVal={
     email:"",
     password:"",
@@ -38,7 +39,7 @@ const Login=()=>{
   const submit=(e)=>{
     e.preventDefault();
     e.stopPropagation();
-    setloading(true)
+    
  signInWithEmailAndPassword(auth, State.email, State.password)
   .then(() => {
     // Signed in 
@@ -52,7 +53,6 @@ const Login=()=>{
     const errorMessage = error.message;
     toast.error(errorMessage+ errorCode)
   });
-    setloading(false)
   }
       return (
      <div className="auth-wrapper">
@@ -93,15 +93,22 @@ const Login=()=>{
                   }}
                  required/>
         </div>
-        <Typography className="me-auto my-2">Forget <Link to="#">passowrd?</Link></Typography>
-        <Typography className="me-auto my-2"><Link to="/admin/signup">Create Account?</Link></Typography>
-
-    <LoadingButton type="submit"
+        <Stack className="flex-start" direction="column" spacing={1}>
+        <Typography className="ms-auto my-2">Forget <Link to="#">passowrd?</Link></Typography>
+        <Typography className="ms-auto my-2">Don't have An Account <Link to="/admin/signup">Register?</Link></Typography>
+        </Stack>
+    <Stack className="flex-start px-4">
+    <Button type="submit"
+            sx={{
+              backgroundColor: "rgb(197,182,101)",
+              background: "radial-gradient(circle, rgb(255,218,8) 15%, rgb(249,8,0) 100%)",
+              color:"rgb(0,0,0)",
+            }}
             endIcon={<SendIcon />}
-            loading={loading}
-            loadingPosition="end"
+            className="me-auto ms-4"
             onClick={submit} 
-            variant="contained">Submit</LoadingButton>
+            variant="contained">Submit</Button>
+     </Stack>
       </form>
       </div>
       </div>

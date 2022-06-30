@@ -1,14 +1,14 @@
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import LoadingButton from '@mui/lab/LoadingButton';
+import Button from "@mui/material/Button";
+
 import {useState,useContext} from "react";
 import {createData} from "../firebase/api";
 import { toast } from 'react-toastify';
 import SendIcon from '@mui/icons-material/Send';
-import {SetAdminDataNode,AdminDataNode} from "../App";
+import {SetAdminDataNode} from "../App";
 const RegistrationForm=()=>{
-  const Adminstate=useContext(AdminDataNode);
   const setAdminState=useContext(SetAdminDataNode);
   const initialVal={
     name:"",
@@ -85,17 +85,22 @@ const RegistrationForm=()=>{
                  value={State.mobile}
                  onChange={HandleChange}
                  required/>
-     <Stack className="my-2 text-start ms-2" direction="row">
-      <Typography className="text-danger fw-bold mx-1">T/C*</Typography>
-      <Typography>एक माला <strong> "ॐ श्री सौभाग्य गुरु देवा य नमः की"</strong></Typography>
+     <Stack className="my-2 text-start ms-2" spaceing={1} direction="row">
+      <Typography className="text-danger fw-bold mx-1 ms-4">T/C*</Typography>
+      <Typography>एक माला <strong> "ॐ श्री सौभाग्य गुरु दुेेवाय नमः की"</strong></Typography>
     </Stack>
-    <LoadingButton type="submit"
+    <Stack className="flex-start px-4">
+    <Button type="submit"
+            sx={{
+              backgroundColor: "rgb(197,182,101)",
+              background: "radial-gradient(circle, rgb(255,218,8) 15%, rgb(249,8,0) 100%)",
+              color:"rgb(0,0,0)",
+            }}
             endIcon={<SendIcon />}
-            loading={Adminstate.loading}
-            className="me-auto"
-            loadingPosition="end"
+            className="me-auto ms-4"
             onClick={submit} 
-            variant="contained">Submit</LoadingButton>
+            variant="contained">Submit</Button>
+     </Stack>
     </form>
     </>
     )
