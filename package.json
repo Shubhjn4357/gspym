@@ -1,7 +1,7 @@
 {
   "name": "GSPYM",
   "version": "0.1.0",
-  "homepage":"https://Shubhjn4357.github.io/GSPYM/",
+  "homepage": "https://gspym.js.org",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
