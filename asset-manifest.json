@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gspym/static/css/main.60454791.css",
+    "main.js": "/gspym/static/js/main.ab6ecddb.js",
+    "static/media/image1.png": "/gspym/static/media/image1.6edaf7185fa5e09beb6f.png",
+    "static/media/image2.png": "/gspym/static/media/image2.bf421655d476b34456f7.png",
+    "index.html": "/gspym/index.html",
+    "main.60454791.css.map": "/gspym/static/css/main.60454791.css.map",
+    "main.ab6ecddb.js.map": "/gspym/static/js/main.ab6ecddb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60454791.css",
+    "static/js/main.ab6ecddb.js"
+  ]
+}
