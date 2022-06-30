@@ -1,12 +1,13 @@
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
+import {Link} from "react-router-dom";
 const SectionGroup=()=>{
-  
    return (<>
-  <div className="text-center">
+  <div className="text-center mt-4">
   <svg viewBox="-20 -10 550 200">
     <path id="curve" fill="transparent" d="M-0.62,149.67 C103.12,-5.33 351.87,-38.32 501.25,148.67 L146.87,146.67 L147.50,146.67 Z"/>
     <text style={{fontSize:"1.8rem"}} className=" fw-bold" width="auto" stroke="#6d6d6d" strokeWidth="1px" fill="#1f1f1f">
@@ -47,6 +48,11 @@ const SectionGroup=()=>{
     </div>
  </div>
   <Divider/>
+  <div className="d-flex my-4 text-center">
+  <Link className="text-decoration-none mx-auto" to="/register">
+    <Button sx={{fontSize:"1.3rem"}} size="large" color="warning" >Register Here</Button>
+  </Link>
+  </div>
   </div>
   </>)
 }

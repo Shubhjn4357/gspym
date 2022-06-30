@@ -49,7 +49,7 @@ const RegistrationForm=()=>{
   return (
     <>
     <form autoComplete="off"
-          className="glass-morphism p-2"
+          className="glass-morphism p-2 mt-4"
           id="registerForm"
     >
     <Typography className="fs-4 fw-bold my-2">Register</Typography>

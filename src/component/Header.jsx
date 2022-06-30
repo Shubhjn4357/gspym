@@ -75,6 +75,7 @@ const Logout=()=>{
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark"  to="/">Home</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark"  to="/register">Register</Link></MenuItem>
                 <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" to="/admin">Admin</Link></MenuItem>
                 {state?.admin?.email?<MenuItem onClick={Logout}>Logout</MenuItem>:""}
               </Menu>
