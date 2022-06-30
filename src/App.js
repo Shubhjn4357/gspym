@@ -17,7 +17,7 @@ function App() {
   const [State,setState]=useReducer(Reducer,"")
   const [AdminState,setAdminState]=useReducer(AdminReducer,"")
   return (
-    <Bs>
+    <Bs basename={process.env.PUBLIC_URL}>
     <AdminDataNode.Provider value={AdminState}>
     <SetAdminDataNode.Provider value={setAdminState}>
     <DataNode.Provider value={State}>
