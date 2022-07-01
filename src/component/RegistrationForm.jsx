@@ -1,4 +1,4 @@
-import TextField from "@mui/material/TextField";
+/*import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
@@ -7,9 +7,24 @@ import {useState,useContext} from "react";
 import {createData} from "../firebase/api";
 import { toast } from 'react-toastify';
 import SendIcon from '@mui/icons-material/Send';
-import {SetAdminDataNode} from "../App";
+import {SetAdminDataNode} from "../App";*/
 const RegistrationForm=()=>{
-  const setAdminState=useContext(SetAdminDataNode);
+ return <iframe title="Register Form" src="https://docs.google.com/forms/d/e/1FAIpQLScWdF4c2dMUepscwWMvTI23CocE5j-rbAEtIf3Jk4cnN5pelQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+ <div class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+ </iframe>
+
+ /* const setAdminState=useContext(SetAdminDataNode);
   const initialVal={
     name:"",
     relate:"" ,
@@ -103,6 +118,6 @@ const RegistrationForm=()=>{
      </Stack>
     </form>
     </>
-    )
+    )*/
 }
 export default RegistrationForm

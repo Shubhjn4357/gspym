@@ -1,7 +1,12 @@
-
+.App-wrapper{
+  background: rgb(255,226,63);
+  background: radial-gradient(circle, rgba(255,226,63,1) 15%, rgba(241,52,46,1) 100%);
+  height:100vh;
+  
+}
 .App {
   text-align: center;
-  height:100vh;
+  height:100%;
   background: rgb(255,226,63);
   background: radial-gradient(circle, rgba(255,226,63,1) 15%, rgba(241,52,46,1) 100%);
   }

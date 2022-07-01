@@ -1,7 +1,7 @@
 {
   "name": "GSPYM",
   "version": "0.1.0",
-  "homepage": "http://gspym.js.org",
+  "homepage": "https://shubhjn4357.github.io/gspym",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",

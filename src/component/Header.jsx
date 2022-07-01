@@ -2,19 +2,19 @@ import AppBar from '@mui/material/AppBar';
 import {styled} from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 
-import {useState,useContext} from "react";
+import {useState/*,useContext*/} from "react";
 import {Link} from "react-router-dom";
 import Button from '@mui/material/Button';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import {AdminDataNode} from "../App";
-import { signOut } from "firebase/auth";
-import {auth} from "../firebase/config"
-import {toast} from "react-toastify";
+//import {AdminDataNode} from "../App";
+//import { signOut } from "firebase/auth";
+//import {auth} from "../firebase/config"
+//import {toast} from "react-toastify";
 const Header=()=>{
-  const state=useContext(AdminDataNode);
+ //const state=useContext(AdminDataNode);
   
   const [anchorEl, setAnchorEl] =useState(null);
 
@@ -28,7 +28,7 @@ const Header=()=>{
   top:"0",
   });
  
-const Logout=()=>{
+/*const Logout=()=>{
   signOut(auth).then(() => {
   // Sign-out successful.
   toast.success("See You Later")
@@ -36,7 +36,7 @@ const Logout=()=>{
   // An error happened.
   toast.error(error.message)
 });
-}
+}*/
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -80,8 +80,8 @@ const Logout=()=>{
               >
                 <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark"  to="/">Home</Link></MenuItem>
                 <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark"  to="/register">Register</Link></MenuItem>
-                <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" to="/admin">Admin</Link></MenuItem>
-                {state?.admin?.email?<MenuItem onClick={Logout}>Logout</MenuItem>:""}
+               {/* <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" to="/admin">Admin</Link></MenuItem>
+                {state?.admin?.email?<MenuItem onClick={Logout}>Logout</MenuItem>:""}*/}
               </Menu>
       </Bar>
 

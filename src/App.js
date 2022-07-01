@@ -22,6 +22,7 @@ function App() {
     <SetAdminDataNode.Provider value={setAdminState}>
     <DataNode.Provider value={State}>
     <SetDataNode.Provider value={setState}>
+    <div className="App-wrapper">
     <div className="App">
     <Loader/>
     <Header></Header>
@@ -36,6 +37,7 @@ function App() {
                       pauseOnHover />
            <Outlet/>
            <Rout/>
+    </div>
     </div>
     </SetDataNode.Provider>
     </DataNode.Provider>
