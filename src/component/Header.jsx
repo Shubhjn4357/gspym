@@ -2,13 +2,10 @@ import AppBar from '@mui/material/AppBar';
 import {styled} from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 
-import {useState/*,useContext*/} from "react";
-import {Link} from "react-router-dom";
+
 import Button from '@mui/material/Button';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
 //import {AdminDataNode} from "../App";
 //import { signOut } from "firebase/auth";
 //import {auth} from "../firebase/config"
@@ -16,7 +13,7 @@ import Menu from '@mui/material/Menu';
 const Header=()=>{
  //const state=useContext(AdminDataNode);
   
-  const [anchorEl, setAnchorEl] =useState(null);
+  
 
   const Bar=styled(AppBar)({
   background: "rgba( 255, 255, 255, 0.2 )",
@@ -37,13 +34,7 @@ const Header=()=>{
   toast.error(error.message)
 });
 }*/
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  }; 
   return (
     <>
       <Bar position="sticky">
@@ -65,25 +56,7 @@ const Header=()=>{
               <span className="mx-1 text-small">जय गुसौभाग्य उमेश प्रकाश</span>
           </Toolbar>
         </Container>
-          <Menu id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark"  to="/">Home</Link></MenuItem>
-                <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark"  to="/register">Register</Link></MenuItem>
-               {/* <MenuItem onClick={handleClose}><Link className="text-decoration-none text-dark" to="/admin">Admin</Link></MenuItem>
-                {state?.admin?.email?<MenuItem onClick={Logout}>Logout</MenuItem>:""}*/}
-              </Menu>
+
       </Bar>
 
     </>
