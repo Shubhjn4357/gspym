@@ -54,7 +54,7 @@ const Public=()=>{
          
           <Stack className="text-center" direction="column" spacing={0}>
             <Typography className="fs-2 mx-auto text-danger fw-bold">भव्य एकासना दिवस</Typography>
-            <Typography className="fs-4 mx-auto fw-bolder mb-">दिनांक 21 जुलाई 2022 शुक्रवार </Typography>
+            <Typography className="fs-4 mx-auto fw-bolder mb-">दिनांक 22 जुलाई 2022 शुक्रवार </Typography>
           </Stack>
            <Stack className="text-center" direction="column" spacing={0}>
             <Typography className="fs-3 mx-auto mt-4 text-danger">- विशेष -</Typography>
