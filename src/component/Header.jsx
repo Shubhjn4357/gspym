@@ -61,7 +61,8 @@ const Header=()=>{
           </Toolbar>
           <Toolbar className="justify-content-between">
               <span className="mx-1 text-small">जय आत्मानंद देवेन्द्र शिव</span>
-              <span className="mx-1 text-small">जय सौभाग्य उमेश प्रकाश</span>
+              <span className="mx-1 text-small">श्री धर्मदासाचार्य नमः</span>
+              <span className="mx-1 text-small">जय गुसौभाग्य उमेश प्रकाश</span>
           </Toolbar>
         </Container>
           <Menu id="menu-appbar"

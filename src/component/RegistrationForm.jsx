@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import SendIcon from '@mui/icons-material/Send';
 import {SetAdminDataNode} from "../App";*/
 const RegistrationForm=()=>{
- return <iframe title="Register Form" src="https://docs.google.com/forms/d/e/1FAIpQLScWdF4c2dMUepscwWMvTI23CocE5j-rbAEtIf3Jk4cnN5pelQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+ return <iframe title="Register Form" src="https://docs.google.com/forms/d/e/1FAIpQLScWdF4c2dMUepscwWMvTI23CocE5j-rbAEtIf3Jk4cnN5pelQ/viewform?embedded=true" width="100%" height="500" frameBorder="0" marginHeight="0" marginWidth="0">
  <div class="spinner-border text-success" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
@@ -24,7 +24,7 @@ const RegistrationForm=()=>{
 </div>
  </iframe>
 
- /* const setAdminState=useContext(SetAdminDataNode);
+/* const setAdminState=useContext(SetAdminDataNode);
   const initialVal={
     name:"",
     relate:"" ,

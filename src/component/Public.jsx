@@ -1,62 +1,92 @@
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import List from "@mui/material/List";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
-import {Link} from "react-router-dom";
-import SendIcon from '@mui/icons-material/Send';
+
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import ListItemComponent from "./ListItemComponent";
 const Public=()=>{
+    const verticalLane=[
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+    ]
+    const horizontalLane=[
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      },
+      {
+        icon:<AccountCircleRoundedIcon/>,text:"xyz",num:"***********"
+      }
+  ]
   return (<>
   <div className="text-center mt-4">
-  <svg viewBox="-20 -20 550 200" className="main-head">
-    <path id="curve" fill="transparent" d="M-0.62,149.67 C103.12,-5.33 351.87,-38.32 501.25,148.67 L146.87,146.67 L147.50,146.67 Z"/>
-    <text className=" fw-bold heading" width="auto" stroke="#6d6d6d" strokeWidth="1px" fill="#1f1f1f">
-      <textPath href="#curve">
-        Guru Shri Shobhagya Prakash Yuvak Mandal
-      </textPath>
-    </text>
-  </svg>
-  <div className="container-fluid main-content py-4">
-      <div className="row my-2">
-        <div className="flash">38 Lucky Draw</div>
-      <div className="col-12">
-        <Stack direction="column">
-          <Typography className="fs-md-2 fs-4 text-center text-wrap fw-bold text-danger">38 वी पुण्य तिथि पर</Typography>
-        </Stack>
-      </div>
-    </div>
+    <Typography className="main-head">
+       <span className="fs-2 fw-bolder"> मालव केसरी प्रसिद्ध वक्ता श्री सोभाग्यमल जी (मा.सा) की</span>
+       <span className="fs-3 fw-bolder"> 38वी पुण्य तिथि उपलक्ष्य में</span>
+    </Typography>
+  <div className="container-fluid main-content">
     <div className="row my-2">
-      <div className="col-6">
-        <img className="front-img"  src={image1} alt="pic"/>
+      <div className="col-4">
+        <div className="front-img">
+          <img src={image1} alt="pic1"/>
+        </div>
       </div>
-
-      <div className="col-6">
-         <img className="front-img" src={image2} alt="pic"/>
+      <div className="col-4 d-center">
+           <Stack className="text-center" direction="column" spacing={2}>
+            <Typography className="fs-2 mx-auto text-danger fw-bold">भव्य एकासना दिवस</Typography>
+            <Typography className="fs-3 mx-auto fw-bolder text-decoration-underline">दिनांक 21 जुलाई 2022 </Typography>
+            <Button color="warning" variant="contained" href="#register">Register</Button>
+          </Stack>
+      </div>
+      <div className="col-4">
+        <div className="front-img">
+          <img src={image2} alt="pic2"/>
+        </div>      
       </div>
     </div>
-    <div className="row">
-        <div className="col text-center">
-        <Stack direction="column">
-          <Typography className="fs-5 fw-bold my-1 text-secondary">19 July 2022</Typography>
-        </Stack>
-        <Stack direction="column">
-          <Typography className="fs-3 text-danger fw-bold">3838</Typography>
-          <Typography className="fs-6 fw-bold">एकासना</Typography>
-          <Typography className="fs-6 fw-bold my-2">Ratlam</Typography>
-        </Stack>
-      </div>
-      </div>
     </div>
   <Divider/>
-  <div className="d-flex my-4 text-center">
-  <Link className="text-decoration-none mx-auto" to="/register">
-    <Button className="glass-morphism"
-            size="large" 
-            color="error"
-            endIcon={<SendIcon />}
-            >Register Here</Button>
-  </Link>
+  <div className="container-fluid">
+    <div className="row my-1">
+        <div className="col-12 d-flex p-2 glass-morphism overflow-scroll">
+        <List sx={{justifyContent:'space-around',display:'flex'}}>
+         {horizontalLane.map((item,k)=>{
+         return <ListItemComponent key={k} item={item}/>
+         })}
+         </List>
+        </div>
+    </div>
+    <div className="row my-1">
+        <div className=" col-3 p-2 glass-morphism overflow-scroll">
+          <List sx={{display:(window.innerWidth<768?'flex':'block')}}>
+           {verticalLane.map((item,k)=>{
+           return <ListItemComponent key={k} item={item}/>
+           })}
+           </List>
+        </div>
+        <div id="register" className="col-9">
+          <iframe className="glass-morphism" title="Register Form" src="https://docs.google.com/forms/d/e/1FAIpQLScWdF4c2dMUepscwWMvTI23CocE5j-rbAEtIf3Jk4cnN5pelQ/viewform?embedded=true" width="100%" height="500" frameBorder="0" marginHeight="0" marginWidth="0"/>
+        </div>
+    </div>
   </div>
   </div>
   </>)

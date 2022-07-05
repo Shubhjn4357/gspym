@@ -1,6 +1,7 @@
 import Rout from "./Rout";
 import { ToastContainer} from 'react-toastify';  
 import Header from "./component/Header";
+import Footer from "./component/footer";
 import {useReducer,createContext} from "react";
 import { BrowserRouter as Bs,Outlet} from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,6 +38,7 @@ function App() {
                       pauseOnHover />
            <Outlet/>
            <Rout/>
+     <Footer/>
     </div>
     </div>
     </SetDataNode.Provider>
