@@ -40,11 +40,9 @@ const Header=()=>{
       <Bar position="sticky">
         <Container maxWidth="xl">
           <Toolbar className="justify-content-center">
-             <Button aria-label="display more actions"
+             <Button aria-label=" actions"
                      color="inherit"
-                     aria-haspopup="true"
-                     sx={{mx:"auto"}}
-                     onClick={handleMenu} >
+                     sx={{mx:"auto"}}>
                 <MoreIcon/>
                 <span className="text-center p-2">जय महावीराय नमः</span>
                 <MoreIcon />
