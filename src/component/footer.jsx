@@ -19,7 +19,7 @@ const Footer=()=>{
       <Bar position="sticky">
         <Container maxWidth="xl">
           <Toolbar className="justify-content-center">
-            <footer>आयोजक - गुरु श्री सौभाग्य प्रकाश युवक मंडल,रतलाम</footer>
+            <footer className="fs-2 fw-bold">आयोजक - गुरु श्री सौभाग्य प्रकाश युवक मंडल,रतलाम</footer>
           </Toolbar>
         </Container>
       </Bar>

@@ -44,14 +44,14 @@ const Header=()=>{
                      color="inherit"
                      sx={{mx:"auto"}}>
                 <MoreIcon/>
-                <span className="text-center p-2">जय महावीराय नमः</span>
+                <span className="text-center fs-4 fw-bolder p-2">जय महावीराय नमः</span>
                 <MoreIcon />
                </Button>
           </Toolbar>
           <Toolbar className="justify-content-between">
-              <span className="mx-1 text-small">जय आत्मानंद देवेन्द्र शिव</span>
-              <span className="mx-1 text-small">श्री धर्मदासाचार्य नमः</span>
-              <span className="mx-1 text-small">जय गुसौभाग्य उमेश प्रकाश</span>
+              <span className="mx-1 fs-4 fw-bolder">जय आत्मानंद देवेन्द्र शिव</span>
+              <span className="mx-1 fs-4 fw-bolder">श्री धर्मदासाचार्य नमः</span>
+              <span className="mx-1 fs-4 fw-bolder">जय गुरु सोभाग्य उमेश प्रकाश</span>
           </Toolbar>
         </Container>
 
